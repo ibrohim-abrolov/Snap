@@ -123,18 +123,40 @@ th, td {
     margin-right: 40px;
 }
 
-/*.nav__items--features {
-    position: relative;
-}*/
-
 .nav__link {
-    display: inline-block;
+    position: relative;
     color: #686868;
     font-weight: 500;
     font-size: 14px;
     line-height: 16px;
     text-decoration: none;
     transition: color 0.5s ease;
+}
+
+.nav__link--features::after {
+    position: absolute;
+    left: 70px;
+    top: 6px;
+    width: 8px;
+    height: 4px;
+    display: block;
+    content: "";
+    background-image: url("./images/Path\ 5.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.nav__link--company::after {
+    position: absolute;
+    left: 73px;
+    top: 6px;
+    width: 8px;
+    height: 4px;
+    content: "";
+    display: block;
+    background-image: url("./images/Path\ 6.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .nav__link:hover {
@@ -173,7 +195,13 @@ th, td {
 
     /* Dropdown  */
 
-.nav__dropdown-list {
+.dropdown {
+    position: relative;
+    display: none;
+}
+
+
+.dropdown__list {
     position: relative;
     right: 72px;
     margin-top: 20px;
@@ -188,15 +216,15 @@ th, td {
     list-style: none;
 }
 
-.nav__dropdown-items {
+.dropdown__items {
     margin-bottom: 16px;
 }
 
-.nav__dropdown-items--features:hover {
+/*.dropdown__items--features:hover {
     display: block;
-}
+}*/
 
-.nav__dropdown-link {
+.dropdown__link {
     display: flex;
     align-items: center;
     color: #686868;
@@ -207,7 +235,7 @@ th, td {
     margin-top: 16px;
 }
 
-.nav__dropdown-link--todo::before {
+.dropdown__link--todo::before {
     display: block;
     content: "";
     background-image: url("./images/Combined\ Shape.svg");
@@ -220,7 +248,7 @@ th, td {
     margin-right: 15px;
 }
 
-.nav__dropdown-link--calendar::before {
+.dropdown__link--calendar::before {
     width: 14px;
     height: 16px;
     content: "";
@@ -231,7 +259,7 @@ th, td {
     margin-right: 15px;
 }
 
-.nav__dropdown-link--reminders::before {
+.dropdown__link--reminders::before {
     width: 12px;
     height: 16px;
     content: "";
@@ -243,7 +271,7 @@ th, td {
     margin-right: 15px;
 }
 
-.nav__dropdown-link--last::before {
+.dropdown__link--last::before {
     width: 16px;
     height: 16px;
     display: block;
