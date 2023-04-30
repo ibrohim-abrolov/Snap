@@ -195,18 +195,19 @@ th, td {
 
     /* Dropdown  */
 
-.dropdown {
-    position: relative;
-    display: none;
+
+.nav__items{
+    padding: 20px;
 }
 
+.nav__items--features{
+    position: relative;
+}
 
 .dropdown__list {
-    position: relative;
-    right: 72px;
-    margin-top: 20px;
-    /*top: 35px;
-    left: -85px;*/
+    position: absolute;
+    top: 50px;
+    right: 0;
     display: none;
     background-color: #fff;
     box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.149126);
@@ -214,6 +215,10 @@ th, td {
     padding: 24px;
     margin: 0;
     list-style: none;
+}
+
+.nav__items--features:hover .dropdown__list{
+    display: block;
 }
 
 .dropdown__items {
